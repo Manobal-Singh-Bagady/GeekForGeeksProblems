@@ -4,12 +4,10 @@ class Solution:
     def remove_duplicate(self, A, N):
         p = 0
         for i in range(1, N):
-            if A[i] != A[i - 1]:
-                A[p] = A[i - 1]
+            if A[p] != A[i]:
+                A[p+1] = A[i]
                 p += 1
-        A[p] = A[N - 1]
-        p += 1
-        return p
+        return p+1
 
 
 #{ 
