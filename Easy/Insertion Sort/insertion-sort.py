@@ -3,10 +3,10 @@
 class Solution:
     def insert(self, alist, index, n):
         for i in range(index, -1, -1):
-            if alist[i]>alist[i+1]:
-                alist[i],alist[i+1] = alist[i+1], alist[i]
-            elif alist[i]<alist[i+1]:
+            if alist[i+1]>alist[i]:
                 break
+            alist[i],alist[i+1] = alist[i+1], alist[i]
+            
                 
     #Function to sort the list using insertion sort algorithm.    
     def insertionSort(self, alist, n):
