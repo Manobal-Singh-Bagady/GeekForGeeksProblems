@@ -1,18 +1,30 @@
 #User function template for Python
 
-class Solution:	
+class Solution:
+    def bs(self, arr, l, h, k):
+        if l>h:
+            return -1
+        mid = (l+h)//2
+        if arr[mid]==k:
+            return mid
+        elif arr[mid]>k:
+            return self.bs(arr, l, mid-1, k)
+        else:
+            return self.bs(arr, mid+1, h, k)
+            
 	def binarysearch(self, arr, n, k):
-	    l = 0
-	    r = n-1
-	    while l<=r:
-	        mid = (l+r)//2
-	        if arr[mid]>k:
-	            r = mid-1
-	        elif arr[mid]<k:
-	            l = mid+1
-	        else:
-	            return mid
-	    return -1
+	   return self.bs(arr, 0, n-1, k)
+	   # l = 0
+	   # r = n-1
+	   # while l<=r:
+	   #     mid = (l+r)//2
+	   #     if arr[mid]>k:
+	   #         r = mid-1
+	   #     elif arr[mid]<k:
+	   #         l = mid+1
+	   #     else:
+	   #         return mid
+	   # return -1
 		        
 
 
