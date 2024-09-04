@@ -56,7 +56,7 @@ class Solution
     {
         // ArrayList<Integer> union = new ArrayList<>();
         // int i=0, j = 0;
-        // union.add(Math.min(arr1[i], arr2[j]));
+        
         // while(i<n && j<m){
         //     if(arr1[i]<=arr2[j]){
         //         appendIfUnique(union, arr1[i]);
@@ -74,6 +74,8 @@ class Solution
         //     appendIfUnique(union, arr2[j]);
         //     j++;
         // }
+        // return union;
+        
         TreeSet<Integer> set = new TreeSet<>();
         for(int i: arr1) set.add(i);
         for(int j: arr2) set.add(j);
@@ -81,7 +83,7 @@ class Solution
     }
     
     // static void appendIfUnique(List<Integer> l, Integer element) {
-    //     if(l.get(l.size()-1)!= element) l.add(element);
+    //     if(l.size()==0 || l.get(l.size()-1) != element) l.add(element);
     // }
 }
 
