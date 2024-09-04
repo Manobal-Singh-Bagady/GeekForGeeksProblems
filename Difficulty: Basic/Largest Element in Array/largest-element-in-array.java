@@ -47,13 +47,12 @@ class GFG {
 // } Driver Code Ends
 
 
-
 class Solution {
     public static int largest(int[] arr) {
-        int min = arr[0];
+        int max = arr[0];
         for(int i: arr){
-            if(i>min) min = i;
+            if(i>max) max = i;
         }
-        return min;
+        return max;
     }
 }
